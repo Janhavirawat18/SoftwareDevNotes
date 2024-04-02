@@ -1,0 +1,37 @@
+SOLID Design Principles in Software Development
+
+SOLID is a set a set of five main and major design principles that solve problems that usually arise during development of software.
+Each word in solid stands for a principle:
+S:SRP(Single responsibility Principle)
+O:OCP(Open Closed Principle)
+L:LSP(Liskov Substitution Principle)
+I:ISP(Interface Segregation Principle)
+D:DIP(Dependency Inversion Principle)
+
+These principles help design a robust ,testable, extensible and maintainable Object Oriented Software system.
+ AIM: Helping SE to change their code without any major issues.
+
+The Single Responsibility Principle - SRP
+It states that a module or a class or a function should only have one reason to change/ it should only do one thing.
+Eg: Animal class should only contain one information about the animal. It can contain the breed of the animal and rest details like sound, feeding habits , living environment should be placed in different classes.
+This can lead to more code but the readability and maintainability becomes better.
+
+The Open Closed Principle-OCP
+It states that the class , function or module should be open for extension but closed for modification. In simple terms it means that of you have a class that needs modification, instead of making changes in that particular class you should make a new class that extends the previous class. 
+Eg: If there is a store that accepts payments using cards but now wants to start payment through UPI too, instead of making modification in payment class and adding UPI, we will make a new class UPIpayment extends payments. 
+Using switch statement  makes it likely for you to violate open-closed principle.
+
+The Liskov Substitution Principle-LSP
+Derived or child classes must be substitutable for their base or parent class.
+In simple terms the child class must be functionable without parent class and must be able to replace the parent class.
+Eg: You have a animal class in which the parent class has functionality that the animal makes sound, a child class bird is created that extends animal and has a crow as a bird, the crow is the name it flies and it makes sound, now makes sound function is extended from animal which violates LSP. to prevent that we make a new method makes sound and make the crow cry. 
+
+The Interface Segregation Principle-ISP
+It states that we do not force the client to implement  a interface which is irrelevant to them. In simple terms we should break our large codebase into smaller components to use when needed. It sounds same as SRP but in this we talk about the whole code base and not just one class or function or component. 
+Eg: A restaurant contains a menu card, in the menu in the pizza section we have veg and non veg  pizza's written combined. A better approach should be either to separate the columns or to make different menu card for veg and non veg consumers. These two new approaches segregate information into smaller terms making required information easy to get. This is ISP.
+
+The Dependency Inversion Principle-DIP
+High-level modules should not depend on low-level modules. Both should depend on abstractions. This means instead of writing code that relies on specific details of how lower-level code works, you should write code that depends on more general abstractions that can be implemented in different ways.
+
+This makes it easier to change the lower-level code without having to change the higher-level code.
+
